@@ -1,0 +1,442 @@
+/* Hall Ticket Generator Styles */
+
+/* Container and Layout */
+.hall-ticket-container {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.single-ticket {
+  height: 100%;
+  min-height: 380px;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Form Layout Improvements */
+.form-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.form-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Input Field Improvements */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+/* Button Improvements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1f2937;
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-success {
+  background-color: #059669;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #047857;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+/* Table Improvements */
+.table-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: #f9fafb;
+  padding: 1rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-row {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+/* Hall Ticket Specific Styles */
+.hall-ticket {
+  background: white;
+  border: 4px solid #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hall-ticket-header {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid #000;
+}
+
+.hall-ticket-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.hall-ticket-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.hall-ticket-divider {
+  border-bottom: 2px solid #000;
+  margin: 1rem 2rem;
+}
+
+.hall-ticket-main-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.hall-ticket-exam-type {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Student Details Section */
+.student-details {
+  padding: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 2rem;
+}
+
+.detail-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000;
+  width: 7rem;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  flex: 1;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.25rem;
+  margin-left: 0.75rem;
+  min-height: 1.25rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.detail-text {
+  font-size: 0.875rem;
+  color: #000;
+  line-height: 1;
+}
+
+/* Subject Table */
+.subject-table {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.table-wrapper {
+  border: 2px solid #6b7280;
+  border-radius: 0.25rem;
+  height: 100%;
+  min-height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header-row {
+  background-color: #e5e7eb;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid #6b7280;
+  flex-shrink: 0;
+}
+
+.table-header-cell {
+  padding: 0.75rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #9ca3af;
+}
+
+.table-header-cell:last-child {
+  border-right: none;
+}
+
+.table-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid #d1d5db;
+  min-height: 2rem;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 0.5rem;
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #d1d5db;
+  word-break: break-word;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+/* Copy Label */
+.copy-label {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem;
+}
+
+.copy-badge {
+  background-color: #e5e7eb;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #374151;
+  border: 1px solid #6b7280;
+  border-radius: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hall-ticket-container {
+    width: 95vw;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .single-ticket {
+    min-height: 21.875rem;
+    max-height: none;
+  }
+  
+  .form-grid-3,
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .detail-label {
+    width: auto;
+  }
+  
+  .detail-value {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .table-header-row,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .table-header-cell,
+  .table-cell {
+    border-right: none;
+    border-bottom: 1px solid #d1d5db;
+    padding: 0.25rem;
+  }
+  
+  .table-header-cell:last-child,
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    margin: 0;
+  }
+  
+  .print-hidden {
+    display: none !important;
+  }
+  
+  @page {
+    size: A4;
+    margin: 0.5cm;
+  }
+  
+  .hall-ticket-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .single-ticket {
+    break-inside: avoid;
+  }
+}
+
+/* Animation and Transitions */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #f3f4f6;
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
